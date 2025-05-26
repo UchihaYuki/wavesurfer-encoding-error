@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video
+      id="media"
+      src="test.mp4"
+      style="max-height: 50vh; max-width: 50vw"
+      playsinline
+      controls
+    ></video>
+    <div id="container"></div>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script>
+      const wavesurfer = WaveSurfer.create({
+        container: document.getElementById('container'),
+        waveColor: '#4F4A85',
+        progressColor: '#383351',
+        media: document.getElementById('media'),
+      });
+    </script>
+  </body>
+</html>
