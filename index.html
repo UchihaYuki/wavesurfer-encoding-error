@@ -26,6 +26,9 @@
         progressColor: '#383351',
         media: document.getElementById('media'),
       });
+      wavesurfer.on('error', (err) => {
+        console.error(err);
+      });
     </script>
   </body>
 </html>
